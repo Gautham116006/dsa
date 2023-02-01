@@ -51,11 +51,3 @@ for data in l:
     tree.insert(root_node, data)
 
 tree.post_order_traversal(root_node)
-
-
-
-
-
-
-
-
