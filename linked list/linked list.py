@@ -5,7 +5,7 @@ a -> b -> c -> d
 
 class LinkedList:
     """
-    class for a linked list
+    Class for a linked list
     """
 
     class Node:
@@ -71,7 +71,7 @@ class LinkedList:
 
     def deletion(self, idx):
         """
-        delete a node at a given idx
+        Delete a node at a given idx
         """
         curr_node = self.head
 
@@ -89,23 +89,25 @@ class LinkedList:
 
     def search(self, element):
         """
-        search for a node with a given value
+        Search for a node with a given value
         """
         curr_node = self.head
 
         while curr_node.next is not None:
             if curr_node.data == element:
-                return "Found"
+                print("Found")
+                return
             # end if
             curr_node = curr_node.next
         # end while
 
-        return "Not Found"
+        print("Not Found")
+        return
     # end def search
 
     def update(self, data, idx):
         """
-        update value of a node at a given position
+        Update value of a node at a given position
         """
         curr_node = self.head
 
@@ -119,14 +121,14 @@ class LinkedList:
 
     def traversal(self):
         """
-        traverse from one node to other
+        Traverse from one node to other
         """
         raise NotImplementedError
     # end def traversal
 
     def get_ele_at_index(self, idx):
         """
-        return element at a given idx
+        Return element at a given idx
         """
         curr_node = self.head
 
@@ -139,7 +141,7 @@ class LinkedList:
 
     def sort(self):
         """
-        sort all the elements in the list
+        Sort all the elements in the list
         """
         length = 1
         curr_node = self.head
@@ -163,11 +165,8 @@ class LinkedList:
 
     def merge(self):
         """
-        merge two linked list
+        Merge two linked list
         """
         raise NotImplementedError
     # end def merge
 # end class LinkedList
-
-
-

@@ -29,7 +29,7 @@ def traverse_matrix_clockwise(matrix):
         bottom_row -= 1
         # end for
 
-        # traverse left row
+        # traverse left column
         for i in range(bottom_row, top_row - 1, -1):
             matrix[i][left_column] = n - 1
 
@@ -40,7 +40,7 @@ def traverse_matrix_clockwise(matrix):
     # end while
 
     for row in matrix:
-        print(row)
+        print("  ".join(map(str, row)))
     # end for
 
 

@@ -12,7 +12,6 @@ class Tree:
         return node
     # end def create_node
 
-
     def insert(self, node, data):
         if node is None:
             return self.create_node(data)
@@ -30,6 +29,7 @@ class Tree:
             else:
                 node.left = self.insert(node.left, data)
         return node
+    # end def insert
 
     def inorder_traversal(self, node):
         if node.left is not None:
@@ -37,6 +37,7 @@ class Tree:
         print(f'{node.data} ')
         if node.right is not None:
             self.inorder_traversal(node.right)
+    # end def inorder_traversal
 
     def post_order_traversal(self, node):
         if node.right is not None:
@@ -44,6 +45,7 @@ class Tree:
         print(f'{node.data} ')
         if node.left is not None:
             self.post_order_traversal(node.left)
+    # end def post_order_traversal
 
     def pre_order_traversal(self, node):
         if node.data is not None:
@@ -52,6 +54,7 @@ class Tree:
             self.pre_order_traversal(node.left)
         if node.right is not None:
             self.pre_order_traversal(node.right)
+    # end def pre_order_traversal
 
 
 tree = Tree()
